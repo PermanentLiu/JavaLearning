@@ -49,11 +49,11 @@ class FrontDoor extends Door implements Alarm
 class BackDoor extends Door
 {
 
-	static String Front = "Back";
+	static String Back = "Back";
 
 	public BackDoor()
 	{
-		super(Front);
+		super(Back);
 	}
 
 
@@ -82,7 +82,7 @@ class MyCar extends Car implements Alarm
 
 	public MyCar(String Koenigsegg)
 	{
-		super(brand);
+		super(Koenigsegg);
 		// TODO Auto-generated constructor stub
 	}
 
