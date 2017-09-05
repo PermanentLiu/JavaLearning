@@ -62,7 +62,7 @@ public class Main
 					last.clear();
 					for (int j = 0; j < i; j++)
 					{
-						System.out.print(now.get(j) + " ");
+						System.out.print(now.get(j) + "\t");
 						last.add(j, now.get(j));
 					}
 					System.out.println();
@@ -90,7 +90,7 @@ public class Main
 					last.clear();
 					for (int j = 0; j < i; j++)
 					{
-						System.out.print(now.get(j) + " ");
+						System.out.print(now.get(j) + "\t");
 						last.add(j, now.get(j));
 					}
 					System.out.println();
