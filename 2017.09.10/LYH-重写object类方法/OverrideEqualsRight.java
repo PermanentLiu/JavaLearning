@@ -10,6 +10,7 @@ class Person
 		this.idStr = idStr;
 	}
 	
+	@Override
 	public boolean equals(Object obj)
 	{
 		if (this == obj)
