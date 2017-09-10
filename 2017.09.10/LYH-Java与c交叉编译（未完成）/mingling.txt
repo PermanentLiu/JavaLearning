@@ -1,0 +1,1 @@
+gcc -m32  -Wl,--add-stdcall-alias -I"C:\Program Files\Java\jdk1.8.0_121\include" -I"C:\Program Files\Java\jdk1.8.0_121\include\win32" -shared -o HelloNative.dll HelloNative.cpp
