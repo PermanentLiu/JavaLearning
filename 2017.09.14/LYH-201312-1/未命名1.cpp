@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-
+typedef struct SeqList PSeqList;
 
 struct SeqList
 {
@@ -9,7 +10,7 @@ struct SeqList
 	int * element;
 };
 
-typedef struct SeqList PSeqList;
+
 
 
 
@@ -17,16 +18,16 @@ typedef struct SeqList PSeqList;
 
 int main(void)
 {
-	(PSeqList *)palist_head = (PSeqList *)malloc(sizeof(PSeqList));
+	PSeqList * palist_head = (PSeqList *)malloc(sizeof(PSeqList));
 	scanf("%d", &palist_head -> MAX);
 	int i = 1;
-	(PSeqList *)palist_head = (PSeqList *)malloc(sizeof(PSeqList));
+//	(PSeqList *)palist_head = (PSeqList *)malloc(sizeof(PSeqList));
 	
 	
-	for ( ; i <= PSeqList.MAX; i++)
+	for ( ; i <= palist_head -> MAX; i++)
 	{
-		(PSeqList *)palist = (PSeqList *)malloc(sizeof(PSeqList));
-		scanf("%d ", palist -> element[i]);
+		PSeqList * palist = (PSeqList *)malloc(sizeof(PSeqList));
+		scanf("%d", &palist -> element[i]);
 		if (i == 0)
 		{
 			palist_head = palist;
@@ -34,7 +35,7 @@ int main(void)
 	}
 	
 	
-	for (i = 1; i <= PSeqList.MAX; i++)
+	for (i = 1; i <= palist_head -> MAX; i++)
 	{
 		printf("%d ", palist_head -> element[i]);
 	}
