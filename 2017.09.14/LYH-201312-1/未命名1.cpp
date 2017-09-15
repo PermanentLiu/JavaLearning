@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SeqList PSeqList;
+
 
 struct SeqList
 {
@@ -11,27 +11,29 @@ struct SeqList
 };
 
 
-
+typedef struct SeqList * PSeqList;
 
 
 
 
 int main(void)
 {
-	PSeqList * palist_head = (PSeqList *)malloc(sizeof(PSeqList));
+	PSeqList palist_head = (PSeqList)malloc(sizeof(struct SeqList));
 	scanf("%d", &palist_head -> MAX);
-	int i = 1;
+	int i = 0;
 //	(PSeqList *)palist_head = (PSeqList *)malloc(sizeof(PSeqList));
 	
 	
-	for ( ; i <= palist_head -> MAX; i++)
+	for ( ; i < palist_head -> MAX; i++)
 	{
-		PSeqList * palist = (PSeqList *)malloc(sizeof(PSeqList));
+//		int temp;
+		PSeqList palist = (PSeqList)malloc(sizeof(struct SeqList));
 		scanf("%d", &palist -> element[i]);
-		if (i == 0)
-		{
-			palist_head = palist;
-		}
+//		palist -> element[i] = temp;
+//		if (i == 0)
+//		{
+//			palist_head = palist;
+//		}
 	}
 	
 	
