@@ -30,10 +30,10 @@ int main(void)
 		PSeqList palist = (PSeqList)malloc(sizeof(struct SeqList));
 		scanf("%d", &palist -> element[i]);
 //		palist -> element[i] = temp;
-//		if (i == 0)
-//		{
-//			palist_head = palist;
-//		}
+		if (i == 0)
+		{
+			palist_head = palist;
+		}
 	}
 	
 	
