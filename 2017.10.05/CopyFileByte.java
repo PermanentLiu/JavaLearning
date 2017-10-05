@@ -17,7 +17,7 @@ public class CopyFileByte
 			
 			int c;
 			
-			while ((c = inputStream.read(null)) != -1)
+			while ((c = inputStream.read()) != -1)
 			{
 				outputStream.write(c);
 			}
