@@ -1,3 +1,5 @@
+import java.lang.reflect.Field;
+
 public class ObjectUtils {
     
     /**
@@ -5,12 +7,34 @@ public class ObjectUtils {
      * @param source
      * @param target
      */
-    public static void copyProperties(Object source, Object target) 
+    public static void copyProperties(Object source, Object target) throws Exception
     {
         // your code here
+    	
+    	
+    	for (Field f : source.getClass().getDeclaredFields())
+    	{
+    		Field field = target.getClass().getDeclaredField(f.getName());
+    		
+    		field.setAccessible(true);
+    		f.setAccessible(true);
+    		
+    		if (f.getName().equals("id"))
+    		{
+    			continue;
+    		}
+    		else
+    		{
+    			field.set(target, f.get(source));
+    		}
+    		
+//    		f.setAccessible(true);
+    		
+    	}
+    	
     }
     
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
         User source = new User(1);
         source.setName("tianmaying");
