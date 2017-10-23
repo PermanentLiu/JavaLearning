@@ -105,7 +105,7 @@ pNode recall()
 void findWay(int i, int j)
 {
 	pNode temp = (pNode) malloc(sizeof(Node));
-	int t;
+	int t = 0;
 	
 	if (map[i - 1][j] == 0)//up 
 	{
@@ -202,6 +202,9 @@ int main(void)
 	findWay(1, 1);
 	printMap();
 	printWay();
+	
+	system("pause");
+	system("pause");
 	
 	return 0;
 }
