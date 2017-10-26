@@ -14,7 +14,7 @@ import android.widget.EditText;
 import static android.support.v4.content.ContextCompat.startActivity;
 import static com.permanent_liufoxmail.helloworld.R.id.textview1;
 
-public class HelloWorldActivity extends AppCompatActivity
+public class HelloWorldActivity extends AppCompatActivity implements View.OnClickListener
 {
     private Button button1;
     private Button button2;
@@ -28,40 +28,41 @@ public class HelloWorldActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hello_world_layout);
 
+
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         editText1 = (EditText) findViewById(R.id.editText1);
 
-        button1.setOnClickListener(new PlusOne(this.button1, this.button2));
-        button2.setOnClickListener(new MutiplyTwo(this.button2, this.button1));
-        button3.setOnClickListener(new textMultiplyTwoOnClick(editText1, HelloWorldActivity.this, SecondActivity.class));
+        onClick(button1);
+        onClick(button2);
+        onClick(button3);
 
+//        button1.setOnClickListener(new PlusOne(this.button1, this.button2));
+//        button2.setOnClickListener(new MutiplyTwo(this.button2, this.button1));
+//        button3.setOnClickListener(new textMultiplyTwoOnClick(editText1, HelloWorldActivity.this, SecondActivity.class));
 
 
     }
 
-//    @Override
-//    public void onClick(View view)
-//    {
-//        switch (view.getId())
-//        {
-//            case R.id.button1:
-//                new PlusOne(this.button1, this.button2);
-//                break;
-//
-//            case R.id.button2:
-//                new MutiplyTwo(this.button2, this.button1);
-//                break;
-//
-//            case R.id.button3:
-//                new textMultiplyTwoOnClick(editText1, HelloWorldActivity.this, SecondActivity.class);
-//                break;
-//            case R.id.editText1:
-//                new textMultiplyTwoOnClick(editText1, HelloWorldActivity.this, SecondActivity.class);
-//                break;
-//        }
-//    }
+    @Override
+    public void onClick(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.button1:
+                button1.setOnClickListener(new PlusOne(this.button1, this.button2));
+                break;
+
+            case R.id.button2:
+                button2.setOnClickListener(new MutiplyTwo(this.button2, this.button1));
+                break;
+
+            case R.id.button3:
+                button3.setOnClickListener(new textMultiplyTwoOnClick(editText1, HelloWorldActivity.this, SecondActivity.class));
+                break;
+        }
+    }
 }
 
 class textMultiplyTwoOnClick implements View.OnClickListener
