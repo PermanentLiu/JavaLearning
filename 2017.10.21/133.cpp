@@ -3,7 +3,7 @@
 */ 
 #include <stdio.h>
 #include <stdlib.h>
-#define R 6 
+#define R 7 
 
 struct _Node
 {
@@ -50,7 +50,36 @@ void printMap()
 	{
 		for (j = 0; j < R; j++)
 		{
-			printf("%d\t", map[i][j]);
+			printf("\t%d", map[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void printFinalMap()
+{
+	printf("\n-----------------------------------------------------\n");
+	
+	int i = 0;
+	int j = 0;
+	
+	for (i = 0; i < R; i++)
+	{
+		for (j = 0; j < R; j++)
+		{
+			if (map[i][j] == -1)
+			{
+				printf("\t■");
+			}
+			else if (map[i][j] == 1)
+			{
+				printf("\t□");
+			}
+			else
+			{
+				printf("\t△");
+			}
+			
 		}
 		printf("\n");
 	}
@@ -67,27 +96,27 @@ void printWay()
 		map[temp -> line][temp -> list] = 1;
 		temp = temp -> next;
 	}
-	printMap();
+	printFinalMap();
 	
 	printf("\n-----------------------------------------------------\n");
 	
 	temp = head -> next;
 	while (temp != tail)
 	{
-		printf("%d, %d\n", temp -> line, temp -> list);
+		printf("%d\,%d\n", temp -> line, temp -> list);
 		length++;
 		temp = temp -> next;
 	}
-	
 	printf("\nThe length is : %d", length);
 }
 
+//回溯 
 pNode recall()
 {
 	pNode t2 = head -> next;
 	pNode t1 = t2 -> next;
 	
-	while (t2 -> data < t1 -> data)
+	while (t2 -> data <= t1 -> data)
 	{
 		map[t2 -> line][t2 -> list] = -1;
 		head -> next = t1;
@@ -118,6 +147,17 @@ void findWay(int i, int j)
 		return;
 	}
 	
+	if (map[i - 1][j + 1] == 0)//up,right
+	{
+		t++;
+	}
+	else if (map[i - 1][j + 1] == 0)
+	{
+		listInsert(i, j);
+		listInsert(i - 1, j + 1);
+		return;
+	}
+	
 	if (map[i][j + 1] == 0)//right
 	{
 		t++;
@@ -126,6 +166,17 @@ void findWay(int i, int j)
 	{
 		listInsert(i, j);
 		listInsert(i, j + 1);
+		return;
+	}
+	
+	if (map[i + 1][j + 1] == 0)//down,right
+	{
+		t++;
+	} 
+	else if (map[i + 1][j + 1] == 9)
+	{
+		listInsert(i, j);
+		listInsert(i + 1, j + 1);
 		return;
 	}
 	
@@ -140,6 +191,17 @@ void findWay(int i, int j)
 		return;
 	}
 	
+	if (map[i + 1][j - 1] == 0)//down, left
+	{
+		t++;
+	} 
+	else if (map[i + 1][j - 1] == 9)
+	{
+		listInsert(i, j);
+		listInsert(i + 1, j - 1);
+		return;
+	}
+	
 	if (map[i][j - 1] == 0)//left
 	{
 		t++;
@@ -151,6 +213,17 @@ void findWay(int i, int j)
 		return;
 	}
 	
+	if (map[i - 1][j - 1] == 0)//up,left
+	{
+		t++;
+	}
+	else if (map[i - 1][j - 1] == 9)
+	{
+		listInsert(i, j);
+		listInsert(i - 1, j - 1);
+		return;
+	}
+	
 	map[i][j] = t;
 	printMap();	
 	listInsert(i, j);
@@ -159,17 +232,33 @@ void findWay(int i, int j)
 	{
 		findWay(i - 1, j);
 	} 
+	else if (map[i - 1][j + 1] == 0)//up,right
+	{
+		findWay(i - 1, j + 1);
+	}
 	else if (map[i][j + 1] == 0)//right
 	{
 		findWay(i, j + 1);
+	}
+	else if (map[i + 1][j + 1] == 0)//down,right
+	{
+		findWay(i + 1, j + 1);
 	}
 	else if (map[i + 1][j] == 0)//down
 	{
 		findWay(i + 1, j);
 	}
+	else if (map[i + 1][j - 1] == 0)//down,left
+	{
+		findWay(i + 1, j - 1);
+	}
 	else if (map[i][j - 1] == 0)//left
 	{
 		findWay(i, j - 1);
+	}
+	else if (map[i - 1][j - 1] == 0)//up,left
+	{
+		findWay(i - 1, j - 1);
 	}
 	
 	//如果周围没有路可走 
@@ -186,12 +275,13 @@ void findWay(int i, int j)
 
 int main(void)
 {
-	map[0][0] = -1; map[0][1] = -1; map[0][2] = -1; map[0][3] = -1; map[0][4] = -1; map[0][5] = -1;
-	map[1][0] = -1; map[1][1] =  0; map[1][2] =  0; map[1][3] =  0; map[1][4] =  0; map[1][5] = -1;
-	map[2][0] = -1; map[2][1] = -1; map[2][2] =  0; map[2][3] = -1; map[2][4] = -1; map[2][5] = -1;
-	map[3][0] = -1; map[3][1] = -1; map[3][2] =  0; map[3][3] =  0; map[3][4] =  0; map[3][5] = -1;
-	map[4][0] = -1; map[4][1] = -1; map[4][2] =  0; map[4][3] = -1; map[4][4] =  9; map[4][5] = -1;
-	map[5][0] = -1; map[5][1] = -1; map[5][2] = -1; map[5][3] = -1; map[5][4] = -1; map[5][5] = -1;
+	map[0][0] = -1; map[0][1] = -1; map[0][2] = -1; map[0][3] = -1; map[0][4] = -1; map[0][5] = -1; map[0][6] = -1;
+	map[1][0] = -1; map[1][1] =  0; map[1][2] =  0; map[1][3] =  0; map[1][4] =  0; map[1][5] =  0; map[1][6] = -1;
+	map[2][0] = -1; map[2][1] = -1; map[2][2] = -1; map[2][3] =  0; map[2][4] = -1; map[2][5] = -1; map[2][6] = -1;
+	map[3][0] = -1; map[3][1] = -1; map[3][2] =  0; map[3][3] = -1; map[3][4] = -1; map[3][5] = -1; map[3][6] = -1;
+	map[4][0] = -1; map[4][1] =  0; map[4][2] = -1; map[4][3] =  0; map[4][4] = -1; map[4][5] =  0; map[4][6] = -1;
+	map[5][0] = -1; map[5][1] = -1; map[5][2] = -1; map[5][3] =  0; map[5][4] =  0; map[5][5] = -1; map[5][6] =  0;
+	map[6][0] = -1; map[6][1] = -1; map[6][2] = -1; map[6][3] = -1; map[6][4] = -1; map[6][5] = -1; map[6][6] =  9; 
 	
 	printMap();
 	
@@ -202,9 +292,6 @@ int main(void)
 	findWay(1, 1);
 	printMap();
 	printWay();
-	
-	system("pause");
-	system("pause");
 	
 	return 0;
 }
