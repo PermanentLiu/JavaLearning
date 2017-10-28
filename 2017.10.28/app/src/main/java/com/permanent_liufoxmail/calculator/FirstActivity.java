@@ -9,12 +9,17 @@ import android.view.View.OnClickListener;
 
 
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 
 public class FirstActivity extends AppCompatActivity implements OnClickListener
 {
-    private TextView textView;
+    private TextView textView5;
+    private TextView textView4;
+    private TextView textView3;
+    private TextView textView2;
+    private TextView textView1;
     private Button button0;
     private Button button1;
     private Button button2;
@@ -34,6 +39,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
     private Button point;
     private Button equal;
     private Button back;
+    private ScrollView scrollView;
 
     private String text;
 
@@ -43,7 +49,12 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        textView = (TextView) findViewById(R.id.textView);
+
+        textView5 = (TextView) findViewById(R.id.textView5);
+        textView4 = (TextView) findViewById(R.id.textView4);
+        textView3 = (TextView) findViewById(R.id.textView3);
+        textView2 = (TextView) findViewById(R.id.textView2);
+        textView1 = (TextView) findViewById(R.id.textView1);
         button0 = (Button) findViewById(R.id.button0);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
@@ -63,6 +74,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         point = (Button) findViewById(R.id.point);
         equal = (Button) findViewById(R.id.equal);
         back = (Button) findViewById(R.id.back);
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
 
         button0.setOnClickListener(this);
         button1.setOnClickListener(this);
@@ -83,6 +95,23 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         point.setOnClickListener(this);
         equal.setOnClickListener(this);
         back.setOnClickListener(this);
+
+
+        scrollToButtom();
+
+
+    }
+
+    public void scrollToButtom()
+    {
+        scrollView.post(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                scrollView.scrollTo(0, 1000);
+            }
+        });
     }
 
     @Override
@@ -92,79 +121,99 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         {
 //            case R.id.textView:break;
             case R.id.button0:
-                this.textView.append("0");
+                scrollToButtom();
+                this.textView1.append("0");
                 break;
             case R.id.button1:
-                this.textView.append("1");
+                scrollToButtom();
+                this.textView1.append("1");
                 break;
             case R.id.button2:
-                this.textView.append("2");
+                scrollToButtom();
+                this.textView1.append("2");
                 break;
             case R.id.button3:
-                this.textView.append("3");
+                scrollToButtom();
+                this.textView1.append("3");
                 break;
             case R.id.button4:
-                this.textView.append("4");
+                scrollToButtom();
+                this.textView1.append("4");
                 break;
             case R.id.button5:
-                this.textView.append("5");
+                scrollToButtom();
+                this.textView1.append("5");
                 break;
             case R.id.button6:
-                this.textView.append("6");
+                scrollToButtom();
+                this.textView1.append("6");
                 break;
             case R.id.button7:
-                this.textView.append("7");
+                scrollToButtom();
+                this.textView1.append("7");
                 break;
             case R.id.button8:
-                this.textView.append("8");
+                scrollToButtom();
+                this.textView1.append("8");
                 break;
             case R.id.button9:
-                this.textView.append("9");
+                scrollToButtom();
+                this.textView1.append("9");
                 break;
             case R.id.plus:
-                this.textView.append("+");
+                scrollToButtom();
+                this.textView1.append("+");
                 break;
             case R.id.minus:
-                this.textView.append("-");
+                scrollToButtom();
+                this.textView1.append("-");
                 break;
             case R.id.multiply:
-                this.textView.append("*");
+                scrollToButtom();
+                this.textView1.append("*");
                 break;
             case R.id.devide:
-                this.textView.append("/");
+                scrollToButtom();
+                this.textView1.append("/");
                 break;
             case R.id.mod:
-                this.textView.append("%");
+                scrollToButtom();
+                this.textView1.append("%");
                 break;
             case R.id.c:
-                this.textView.setText(null);
+                scrollToButtom();
+                this.textView1.setText(null);
                 break;
             case R.id.point:
-                this.textView.append(".");
+                scrollToButtom();
+                this.textView1.append(".");
                 break;
-
             case R.id.equal:
-                this.textView.append("=");
+                scrollToButtom();
+                this.textView1.append("=");
                 break;
             case R.id.back:
-                this.text = this.textView.getText().toString();
+                this.text = this.textView1.getText().toString();
 
 //                Log.i("length", String.valueOf(this.text.length()));
 
                 if (this.text.length() == 0)
                 {
-                    this.textView.setText(null);
+                    this.textView1.setText(null);
                 }
                 else
                 {
                     char[] temp = new char[this.text.length() - 1];
                     this.text.getChars(0, this.text.length() - 1, temp, 0);
-                    this.textView.setText(String.valueOf(temp));
+                    this.textView1.setText(String.valueOf(temp));
                 }
 
                 break;
 
         }
     }
+
+
+
 }
 
