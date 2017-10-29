@@ -41,10 +41,10 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
     private Button back;
     private ScrollView scrollView;
 
-    private int lastNumber;
-    private int thisNumber;
+    private float lastNumber;
+    private float thisNumber;
     private char operation;
-    private int result;
+    private float result;
     private int flag = 0;
     private int lastNumber_t = 0;
 
@@ -64,6 +64,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 result = lastNumber * thisNumber;
                 break;
             case '/':
+                result = lastNumber / thisNumber;
                 break;
             case '%':
                 result = lastNumber % thisNumber;
@@ -72,11 +73,11 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 
 
 
-        Log.d("lastnumber: ", Integer.toString(lastNumber));
-        Log.d("thisnumber: ", Integer.toString(thisNumber));
-        Log.d("result: ", Integer.toString(result));
+        Log.d("lastnumber: ", Float.toString(lastNumber));
+        Log.d("thisnumber: ", Float.toString(thisNumber));
+        Log.d("result: ", Float.toString(result));
 
-        text = Integer.toString(result);
+        text = Float.toString(result);
 
         textView1.setText("= " + text);
 
