@@ -15,6 +15,11 @@ import android.widget.TextView;
 
 public class FirstActivity extends AppCompatActivity implements OnClickListener
 {
+    private TextView textView10;
+    private TextView textView9;
+    private TextView textView8;
+    private TextView textView7;
+    private TextView textView6;
     private TextView textView5;
     private TextView textView4;
     private TextView textView3;
@@ -121,6 +126,11 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         setContentView(R.layout.activity_first);
 
 
+        textView10 = (TextView) findViewById(R.id.textView10);
+        textView9 = (TextView) findViewById(R.id.textView9);
+        textView8 = (TextView) findViewById(R.id.textView8);
+        textView7 = (TextView) findViewById(R.id.textView7);
+        textView6 = (TextView) findViewById(R.id.textView6);
         textView5 = (TextView) findViewById(R.id.textView5);
         textView4 = (TextView) findViewById(R.id.textView4);
         textView3 = (TextView) findViewById(R.id.textView3);
@@ -181,13 +191,18 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             @Override
             public void run()
             {
-                scrollView.scrollTo(0, 1000);
+                scrollView.scrollTo(0, 5000);
             }
         });
     }
 
     private void up()
     {
+        textView10.setText(textView9.getText());
+        textView9.setText(textView8.getText());
+        textView8.setText(textView7.getText());
+        textView7.setText(textView6.getText());
+        textView6.setText(textView5.getText());
         textView5.setText(textView4.getText());
         textView4.setText(textView3.getText());
         textView3.setText(textView2.getText());
@@ -322,6 +337,11 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 this.textView3.setText(null);
                 this.textView4.setText(null);
                 this.textView5.setText(null);
+                this.textView6.setText(null);
+                this.textView7.setText(null);
+                this.textView8.setText(null);
+                this.textView9.setText(null);
+                this.textView10.setText(null);
                 break;
             case R.id.point:
                 scrollToButtom();
