@@ -83,10 +83,15 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         Log.d("result: ", Float.toString(result));
 
         text = Float.toString(result);
+        up();
 
-        textView1.setText("= " + text);
 
-        lastNumber_t = 0;
+        textView1.setText("=");
+        up();
+        textView1.setText(text);
+
+        lastNumber = result;
+        lastNumber_t = 1;
 
         flag = 1;
     }
@@ -98,13 +103,15 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         {
             String text;
             text = textView1.getText().toString();
-            thisNumber = Integer.parseInt(text);
+            thisNumber = Float.parseFloat(text);
+
+            calculate();
         }
         else if (lastNumber_t == 0)
         {
             String text;
             text = textView1.getText().toString();
-            lastNumber = Integer.parseInt(text);
+            lastNumber = Float.parseFloat(text);
 
             lastNumber_t = 1;
         }
@@ -278,7 +285,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.plus:
                 recordNumber();
                 scrollToButtom();
-                roll();
+
                 up();
                 this.textView1.append("+");
                 operation = '+';
@@ -287,7 +294,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.minus:
                 recordNumber();
                 scrollToButtom();
-                roll();
+
                 up();
                 this.textView1.append("-");
                 operation = '-';
@@ -296,7 +303,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.multiply:
                 recordNumber();
                 scrollToButtom();
-                roll();
+
                 up();
                 this.textView1.append("*");
                 operation = '*';
@@ -305,7 +312,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.devide:
                 recordNumber();
                 scrollToButtom();
-                roll();
+
                 up();
                 this.textView1.append("/");
                 operation = '/';
@@ -314,20 +321,21 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.mod:
                 recordNumber();
                 scrollToButtom();
-                roll();
+
                 up();
                 this.textView1.append("%");
                 operation = '%';
                 flag = 1;
                 break;
             case R.id.equal:
-                recordNumber();
+
                 scrollToButtom();
-                roll();
-                up();
-//                this.textView1.append("=");
-                calculate();
+                recordNumber();
                 flag = 1;
+
+
+
+                lastNumber_t = 0;
                 break;
             case R.id.c:
                 scrollToButtom();
@@ -342,6 +350,8 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 this.textView8.setText(null);
                 this.textView9.setText(null);
                 this.textView10.setText(null);
+
+                lastNumber_t = 0;
                 break;
             case R.id.point:
                 scrollToButtom();

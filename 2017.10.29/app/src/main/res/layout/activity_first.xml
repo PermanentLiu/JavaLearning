@@ -28,8 +28,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "10"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
             <TextView
                 android:id = "@+id/textView9"
@@ -41,8 +41,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "9"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
             <TextView
                 android:id = "@+id/textView8"
@@ -54,8 +54,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "8"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
             <TextView
                 android:id = "@+id/textView7"
@@ -67,8 +67,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "7"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
             <TextView
                 android:id = "@+id/textView6"
@@ -80,8 +80,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "6"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
 
             <TextView
@@ -94,8 +94,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "5"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
 
             <TextView
@@ -108,8 +108,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "4"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
 
             <TextView
@@ -122,8 +122,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "3"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
 
             <TextView
@@ -136,8 +136,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "2"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
 
             <TextView
@@ -150,8 +150,8 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-                android:text = "1"
-                android:textSize = "80sp"
+
+                android:textSize = "50sp"
                 android:visibility = "visible"/>
 
         </LinearLayout>
