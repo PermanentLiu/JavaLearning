@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android = "http://schemas.android.com/apk/res/android"
+      xmlns:sndroid = "http://schemas.android.com/apk/res-auto"
+      app:showAsAction="always"
+      xmlns:app = "http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_setting"
+        android:icon="@drawable/setting"
+        android:title = "Setting"
+
+        />
+
+    <item
+        android:title="About Me"
+        android:icon="@drawable/aboutme"
+        android:id="@+id/action_aboutme"
+
+        />
+
+</menu>

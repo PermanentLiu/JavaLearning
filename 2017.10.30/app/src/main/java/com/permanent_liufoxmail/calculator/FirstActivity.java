@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -87,12 +88,9 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 
         text = Float.toString(result);
         up();
-
-
         textView1.setText("=");
         up();
         textView1.setText(text);
-
         lastNumber = result;
         lastNumber_t = 1;
 
@@ -102,6 +100,9 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 
     private void recordNumber()
     {
+
+
+
         if (lastNumber_t == 1)
         {
             try
@@ -116,7 +117,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             {
                 try
                 {
-
                     scrollToButtom();
                     this.textView1.setText(null);
                     this.textView2.setText(null);
@@ -130,7 +130,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                     this.textView10.setText(null);
 
                     lastNumber_t = 0;
-
                     showDialog();
 
                 }
@@ -138,7 +137,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 {
                     System.exit(0);
                 }
-
             }
 
         }
@@ -180,6 +178,8 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             up();
         }
     }
+
+
 
 
     @Override
@@ -257,6 +257,14 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 scrollView.scrollTo(0, 5000);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        return true;
     }
 
     private void up()
@@ -341,7 +349,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.plus:
                 recordNumber();
                 scrollToButtom();
-
                 up();
                 this.textView1.append("+");
                 operation = '+';
@@ -350,7 +357,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.minus:
                 recordNumber();
                 scrollToButtom();
-
                 up();
                 this.textView1.append("-");
                 operation = '-';
@@ -359,7 +365,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.multiply:
                 recordNumber();
                 scrollToButtom();
-
                 up();
                 this.textView1.append("*");
                 operation = '*';
@@ -368,7 +373,6 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.devide:
                 recordNumber();
                 scrollToButtom();
-
                 up();
                 this.textView1.append("/");
                 operation = '/';
@@ -377,34 +381,34 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.mod:
                 recordNumber();
                 scrollToButtom();
-
                 up();
                 this.textView1.append("%");
                 operation = '%';
                 flag = 1;
                 break;
             case R.id.equal:
-
                 scrollToButtom();
                 recordNumber();
                 flag = 1;
-
-
                 lastNumber_t = 0;
                 break;
             case R.id.c:
                 scrollToButtom();
                 roll();
-                this.textView1.setText(null);
+                this.textView1.setText("0");
                 this.textView2.setText(null);
                 this.textView3.setText(null);
                 this.textView4.setText(null);
                 this.textView5.setText(null);
+
                 this.textView6.setText(null);
                 this.textView7.setText(null);
                 this.textView8.setText(null);
                 this.textView9.setText(null);
                 this.textView10.setText(null);
+
+//                lastNumber_t = 1;
+//                lastNumber = 0;
 
                 lastNumber_t = 0;
                 break;
@@ -421,9 +425,9 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 
 //                Log.i("length", String.valueOf(this.text.length()));
 
-                if (text.length() == 0)
+                if (text.length() == 0 || text.length() == 1)
                 {
-                    this.textView1.setText(null);
+                    this.textView1.setText("0");
                 }
                 else
                 {

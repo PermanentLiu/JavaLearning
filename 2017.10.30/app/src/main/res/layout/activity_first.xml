@@ -155,7 +155,7 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-
+                android:text="0"
                 android:textSize = "50sp"
                 android:visibility = "visible"/>
 
