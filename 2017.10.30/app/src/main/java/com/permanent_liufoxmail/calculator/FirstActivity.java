@@ -289,60 +289,100 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.button0:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("0");
                 flag = 0;
                 break;
             case R.id.button1:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("1");
                 flag = 0;
                 break;
             case R.id.button2:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("2");
                 flag = 0;
                 break;
             case R.id.button3:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("3");
                 flag = 0;
                 break;
             case R.id.button4:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("4");
                 flag = 0;
                 break;
             case R.id.button5:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("5");
                 flag = 0;
                 break;
             case R.id.button6:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("6");
                 flag = 0;
                 break;
             case R.id.button7:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("7");
                 flag = 0;
                 break;
             case R.id.button8:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("8");
                 flag = 0;
                 break;
             case R.id.button9:
                 scrollToButtom();
                 roll();
+                if (textView1.getText().toString().equals("0"))
+                {
+                    textView1.setText(null);
+                }
                 this.textView1.append("9");
                 flag = 0;
                 break;
@@ -358,6 +398,11 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 recordNumber();
                 scrollToButtom();
                 up();
+                if (textView2.getText().toString().equals("0"))
+                {
+                    textView2.setText(null);
+                    textView3.setText(null);
+                }
                 this.textView1.append("-");
                 operation = '-';
                 flag = 1;
@@ -393,6 +438,8 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 lastNumber_t = 0;
                 break;
             case R.id.c:
+
+                flag = 0;
                 scrollToButtom();
                 roll();
                 this.textView1.setText("0");
@@ -407,10 +454,12 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
                 this.textView9.setText(null);
                 this.textView10.setText(null);
 
+                lastNumber_t = 0;
+
 //                lastNumber_t = 1;
 //                lastNumber = 0;
 
-                lastNumber_t = 0;
+
                 break;
             case R.id.point:
                 scrollToButtom();
