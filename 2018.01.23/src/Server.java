@@ -41,6 +41,9 @@ public class Server
             	if (aString.equals("exit"))
             	{
             		flag = false;
+            		System.out.println("received frome client:\n" + is.readLine());
+            		pw.println("对方已经离开");
+                	pw.flush();
             		break;
             	}
             	else

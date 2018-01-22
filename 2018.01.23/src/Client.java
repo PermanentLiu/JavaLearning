@@ -41,6 +41,9 @@ public class Client
             	if (aString.equals("exit"))
             	{
             		flag = false;
+            		System.out.println("received frome client:\n" + in.readLine());
+            		out.println("对方已经离开");
+                	out.flush();
             		break;
             	}
             	else
