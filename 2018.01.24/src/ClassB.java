@@ -3,31 +3,34 @@ public class ClassB extends Thread
 {
 	String string = null;
 	
+	@Override
 	public void run()
 	{
-		System.out.println("liu");
-		try
+		while(true)
 		{
-			Thread.sleep(1500);
+			System.out.println("liu");
+			try
+			{
+				Thread.sleep(1500);
+			}
+			catch(Exception e)
+			{
+				System.out.println("Error");
+			}
+			
+			System.out.println("yong");
+			
+			try
+			{
+				Thread.sleep(1500);
+			}
+			catch(Exception e)
+			{
+				System.out.println("Error");
+			}
+			
+			System.out.println("heng");
 		}
-		catch(Exception e)
-		{
-			System.out.println("Error");
-		}
-		
-		System.out.println("yong");
-		
-		try
-		{
-			Thread.sleep(1500);
-		}
-		catch(Exception e)
-		{
-			System.out.println("Error");
-		}
-		
-		System.out.println("heng");
-		
 		
 	}
 }

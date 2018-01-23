@@ -4,6 +4,7 @@ public class ClassA extends Thread
 {
 	int a = 1;
 	
+	@Override
 	public void run()
 	{
 		while(true)
