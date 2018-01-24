@@ -9,7 +9,7 @@ public class ClassA extends Thread
 	{
 		while(true)
 		{
-			System.out.println(a);
+			System.out.println("œﬂ≥Ã“ª£∫" + a);
 			a++;
 			try
 			{

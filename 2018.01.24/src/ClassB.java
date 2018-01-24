@@ -8,7 +8,7 @@ public class ClassB extends Thread
 	{
 		while(true)
 		{
-			System.out.println("liu");
+			System.out.println("线程三：" + "liu");
 			try
 			{
 				Thread.sleep(1500);
@@ -18,7 +18,7 @@ public class ClassB extends Thread
 				System.out.println("Error");
 			}
 			
-			System.out.println("yong");
+			System.out.println("线程三：" + "yong");
 			
 			try
 			{
@@ -29,7 +29,7 @@ public class ClassB extends Thread
 				System.out.println("Error");
 			}
 			
-			System.out.println("heng");
+			System.out.println("线程三：" + "heng");
 		}
 		
 	}
