@@ -29,15 +29,15 @@ http.createServer(function(req, res){
 	var  addSqlParams = [params.name, params.url,'23453', 'CN'];
 	//增
 	connection.query(addSql,addSqlParams,function (err, result) {
-			if(err){
-			 console.log('[INSERT ERROR] - ',err.message);
-			 return;
-			}        
+		if(err){
+		console.log('[INSERT ERROR] - ',err.message);
+		return;
+		}        
 	 
-		   console.log('--------------------------INSERT----------------------------');
-		   //console.log('INSERT ID:',result.insertId);        
-		   console.log('INSERT ID:',result);        
-		   console.log('-----------------------------------------------------------------\n\n');  
+		console.log('--------------------------INSERT----------------------------');
+		//console.log('INSERT ID:',result.insertId);        
+		console.log('INSERT ID:',result);        
+		console.log('-----------------------------------------------------------------\n\n');  
 	});
 	 
 	
