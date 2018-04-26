@@ -10,6 +10,8 @@ var connection = mysql.createConnection({
   port: '3306',                   
   database: '1', 
 }); 
+
+connection.connect();
  
 http.createServer(function(req, res){
     res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -22,7 +24,6 @@ http.createServer(function(req, res){
     res.end();
 	
 	
-	connection.connect();
  
 	var  addSql = 'INSERT INTO websites(Id,name,url,alexa,country) VALUES(0,?,?,?,?)';
 	var  addSqlParams = [params.name, params.url,'23453', 'CN'];
@@ -39,7 +40,7 @@ http.createServer(function(req, res){
 		   console.log('-----------------------------------------------------------------\n\n');  
 	});
 	 
-	connection.end();
+	
  
 }).listen(11111);
 
