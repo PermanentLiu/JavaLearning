@@ -14,9 +14,9 @@ var connection = mysql.createConnection({
 connection.connect();
  
 
-http.createServer(function(){
+http.createServer(function(req, res){
 	
-	
+	res.writeHead(200, {'Content-Type': 'application/json'});
  
 	var  sql = 'SELECT * FROM websites';
 	//查
@@ -28,8 +28,9 @@ http.createServer(function(){
 			return;
 		}
 		console.log(result);
-		//return JSON.parse(result);
-		//return result;
+		//res.json({result});
+		res.end(JSON.stringify(result));
+
 	});
 	   
 
