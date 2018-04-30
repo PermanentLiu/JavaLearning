@@ -18,7 +18,7 @@ http.createServer(function(req, res){
 	
 	res.writeHead(200, {'Content-Type': 'application/json'});
  
-	var  sql = 'SELECT * FROM websites';
+	var  sql = 'SELECT * FROM user';
 	//查
  
 	
