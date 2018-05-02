@@ -9,8 +9,12 @@ var connection = mysql.createConnection({
 	  password : 'Liu101517',       
 	  port: '3306',                   
 	  database: '1', 
-	}); 
-	
+}); 
+
+var desc = function(x, y){
+	return (x[colID] < y[colID]) ? 1 : -1
+}
+
 connection.connect();
  
 
@@ -27,9 +31,14 @@ http.createServer(function(req, res){
 			console.log('[SELECT ERROR] - ',err.message);
 			return;
 		}
-		console.log(result);
+		//console.log(result);
 		//res.json({result});
+		
+		result.sort(desc);
+		
 		res.end(JSON.stringify(result));
+		console.log(result);
+		
 
 	});
 	   
