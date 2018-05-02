@@ -11,6 +11,8 @@ var connection = mysql.createConnection({
 	  database: '1', 
 }); 
 
+var colID = "score"
+
 var desc = function(x, y){
 	return (x[colID] < y[colID]) ? 1 : -1
 }
