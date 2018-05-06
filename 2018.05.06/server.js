@@ -113,7 +113,7 @@ http.createServer(function(req, res){
     res.write("name：" + params.name);
     res.end();
 	
-	var delSql = 'DELETE FROM websites WHERE id = ?';
+	var delSql = 'DELETE FROM user WHERE name = ?';
 	var delSqlParams = [params.name];
 	//改
 	connection.query(delSql,delSqlParams,function (err, result) {
