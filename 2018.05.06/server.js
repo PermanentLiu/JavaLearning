@@ -128,6 +128,6 @@ http.createServer(function(req, res){
   
 }).listen(11114);
 
-console.log("start delete");
+console.log("start delete!");
 
 
