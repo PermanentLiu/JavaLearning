@@ -24,14 +24,16 @@ http.createServer(function(req, res){
 	var delSql = 'DELETE FROM websites WHERE id = ?';
 	var delSqlParams = [params.name];
 	//改
-	connection.query(modSql,modSqlParams,function (err, result) {
+	connection.query(delSql,delSqlParams,function (err, result) {
 	   if(err){
-			 console.log('[UPDATE ERROR] - ',err.message);
+			 console.log('[DELETE ERROR] - ',err.message);
 			 return;
 	   }        
-	  console.log('--------------------------UPDATE----------------------------');
-	  console.log('UPDATE affectedRows',result.affectedRows);
+	  console.log('--------------------------DELETE----------------------------');
+	  console.log('DELETE affectedRows',result.affectedRows);
 	  console.log('-----------------------------------------------------------------\n\n');
 	});
   
-}).listen(11113);
+}).listen(11114);
+
+console.log("start delete")
