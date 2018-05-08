@@ -88,9 +88,40 @@ http.createServer(function(req, res){
 	res.write("\n");
 	res.write("score: " + params.score); 
     res.end();
+
+	var tempScore = 666;
+	
+	var  sql = 'SELECT * FROM user';
+	
+	connection.query(sql,function(err, result) {
+		if(err){
+			console.log('[SELECT ERROR] - ',err.message);
+			return;
+		}
+		
+		var myobj = eval(result);
+		for (var i = 0; i < myobj.length; i++){
+			if (myobj[i].name == params.name){
+				console.log("myobj[i].score " + myobj[i].score);
+				tempScore = Number(myobj[i].score);
+			}
+		}
+		tempScore = Number(tempScore) + Number(params.score);
+		console.log("sum " + tempScore);
+		
+		
+
+	});
+	
+	if (isNaN(tempScore)){
+		console.log("Fuck");
+		return;
+	}
+	console.log("tempScore " + tempScore);
+	console.log("name " + params.name);
 	
 	var modSql = 'UPDATE user SET score = ? WHERE name = ?';
-	var modSqlParams = [params.score, params.name];
+	var modSqlParams = [tempScore, params.name];
 	//改
 	connection.query(modSql,modSqlParams,function (err, result) {
 	   if(err){
@@ -100,6 +131,7 @@ http.createServer(function(req, res){
 	  console.log('--------------------------UPDATE----------------------------');
 	  console.log('UPDATE affectedRows',result.affectedRows);
 	  console.log('-----------------------------------------------------------------\n\n');
+	  return;
 	});
   
 }).listen(11113);
