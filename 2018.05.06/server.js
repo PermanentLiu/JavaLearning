@@ -154,16 +154,16 @@ http.createServer(function(req, res){
 		//console.log(result);
 		
 		////////////////////////////////////////////////////
-		var tempScore = 0;
-		
 		var myobj = eval(result);
 		
 		for (var i = 0; i < myobj.length; i++){
 			if (myobj[i].name == params.name){
 				console.log("score:" + myobj[i].score);
 				console.log("   NO."+ i);
-				tempScore = Number(myobj[i].score);
-				return ([tempScore, i]);
+				var arrays;
+				arrays[0] = i;
+				arrays[1] = myobj[i].score;
+				return arrays;
 			}
 		}
 		
