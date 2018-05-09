@@ -89,41 +89,13 @@ http.createServer(function(req, res){
 	res.write("score: " + params.score); 
     res.end();
 
-	var tempScore = 666;
-	
-	var  sql = 'SELECT * FROM user';
-	
-	connection.query(sql,function(err, result) {
-		if(err){
-			console.log('[SELECT ERROR] - ',err.message);
-			return;
-		}
-		
-		var myobj = eval(result);
-		for (var i = 0; i < myobj.length; i++){
-			if (myobj[i].name == params.name){
-				console.log("myobj[i].score " + myobj[i].score);
-				tempScore = Number(myobj[i].score);
-			}
-		}
-		tempScore = Number(tempScore) + Number(params.score);
-		console.log("sum " + tempScore);
-		
-		
-
-	});
-	
-	if (isNaN(tempScore)){
-		console.log("Fuck");
-		return;
-	}
-	console.log("tempScore " + tempScore);
-	console.log("name " + params.name);
-	
 	var modSql = 'UPDATE user SET score = ? WHERE name = ?';
-	var modSqlParams = [tempScore, params.name];
+	var modSqlParams = [params.score, params.name];
+	
+	
 	//改
 	connection.query(modSql,modSqlParams,function (err, result) {
+		
 	   if(err){
 			 console.log('[UPDATE ERROR] - ',err.message);
 			 return;
@@ -161,5 +133,47 @@ http.createServer(function(req, res){
 }).listen(11114);
 
 console.log("start delete!");
+
+http.createServer(function(req, res){
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	
+	// 解析 url 参数
+    var params = url.parse(req.url, true).query;
+    res.write("name：" + params.name);
+    res.end();
+	
+	var  sql = 'SELECT * FROM user';
+	//查
+ 
+	
+	connection.query(sql,function (err, result) {
+		if(err){
+			console.log('[SELECT ERROR] - ',err.message);
+			return;
+		}
+		//console.log(result);
+		
+		////////////////////////////////////////////////////
+		var tempScore = 0;
+		
+		var myobj = eval(result);
+		
+		for (var i = 0; i < myobj.length; i++){
+			if (myobj[i].name == params.name){
+				console.log("score:" + myobj[i].score);
+				console.log("   NO."+ i);
+				tempScore = Number(myobj[i].score);
+				return ([tempScore, i]);
+			}
+		}
+		
+
+	});
+	
+	
+	
+	
+}).listen(11110);
+console.log("start search0");
 
 
