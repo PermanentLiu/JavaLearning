@@ -135,12 +135,11 @@ http.createServer(function(req, res){
 console.log("start delete!");
 
 http.createServer(function(req, res){
-	res.writeHead(200, {'Content-Type': 'text/plain'});
+	res.writeHead(200, {'Content-Type': 'text/html'});
 	
 	// 解析 url 参数
     var params = url.parse(req.url, true).query;
-    res.write("name：" + params.name);
-    res.end();
+    //res.write("name：" + params.name);
 	
 	var  sql = 'SELECT * FROM user';
 	//查
@@ -160,10 +159,7 @@ http.createServer(function(req, res){
 			if (myobj[i].name == params.name){
 				console.log("score:" + myobj[i].score);
 				console.log("   NO."+ i);
-				var arrays;
-				arrays[0] = i;
-				arrays[1] = myobj[i].score;
-				return arrays;
+				res.end([myobj[i].score, i]);
 			}
 		}
 		
