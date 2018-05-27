@@ -153,20 +153,32 @@ http.createServer(function(req, res){
 		//console.log(result);
 		
 		////////////////////////////////////////////////////
+		result.sort(desc);
 		var myobj = eval(result);
+		var temp1 = 0;
+		var temp2 = 0;
+		var string = '';
 		
 		for (var i = 0; i < myobj.length; i++){
 			console.log("score:" + myobj[i].score);
 			console.log("   NO."+ i);
 			
 			if (myobj[i].name == params.name){
-				console.log("findout!")
-				res.end([myobj[i].score, i + 1]);
-				return;
+				console.log("findout! " + myobj[i].score + ", " + i);
+				//res.end([myobj[i].score, i + 1]);
+				temp1 = myobj[i].score;
+				temp2 = i + 1;
+				break;
 			}	
 		}
-		console.log("no data");
-		res.end("no data!");
+		
+		temp1 = temp1 + "";
+		temp2 = temp2 + "";
+		console.log("res!!!!!!" + temp1 + ", " + temp2);
+		string = temp1 + "," + temp2;
+		
+		var array = string.split(',');
+		res.end(JSON.stringify(array));
 		return;
 		
 
