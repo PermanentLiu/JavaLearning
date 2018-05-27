@@ -155,15 +155,19 @@ http.createServer(function(req, res){
 		////////////////////////////////////////////////////
 		var myobj = eval(result);
 		
-		for (var i = 1; i <= myobj.length; i++){
+		for (var i = 0; i < myobj.length; i++){
 			console.log("score:" + myobj[i].score);
 			console.log("   NO."+ i);
 			
-			if (myobj[i - 1].name == params.name){
+			if (myobj[i].name == params.name){
 				console.log("findout!")
-				res.end([myobj[i].score, i]);
-			}
+				res.end([myobj[i].score, i + 1]);
+				return;
+			}	
 		}
+		console.log("no data");
+		res.end("no data!");
+		return;
 		
 
 	});
