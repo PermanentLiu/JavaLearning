@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>ChanelScan/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>285</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>630</ColumnWidth1><ColumnWidth2>168</ColumnWidth2><ColumnWidth3>42</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1038</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10744-28287</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>ChanelScan</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-31488-28513</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-26371-17999</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\readme.txt</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1020</SelStart><SelEnd>1020</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\clock.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1182</SelStart><SelEnd>1182</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_mcu.c</Filename><XPos>1</XPos><YPos>35</YPos><SelStart>1451</SelStart><SelEnd>1451</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_assert.h</Filename><XPos>2</XPos><YPos>0</YPos><SelStart>454</SelStart><SelEnd>494</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\basic_rf.c</Filename><XPos>0</XPos><YPos>545</YPos><SelStart>17606</SelStart><SelEnd>17606</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_board.c</Filename><XPos>0</XPos><YPos>123</YPos><SelStart>2630</SelStart><SelEnd>2630</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>72</YPos><SelStart>1619</SelStart><SelEnd>1619</SelEnd></Tab><ActiveTab>6</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\dht11.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>641</SelStart><SelEnd>641</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\dht11.c</Filename><XPos>0</XPos><YPos>94</YPos><SelStart>2002</SelStart><SelEnd>2002</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_defs.h</Filename><XPos>0</XPos><YPos>14</YPos><SelStart>681</SelStart><SelEnd>681</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_board.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>103</SelStart><SelEnd>103</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\basic_rf.h</Filename><XPos>0</XPos><YPos>63</YPos><SelStart>2877</SelStart><SelEnd>2877</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_int.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>553</SelStart><SelEnd>553</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00dae3a0><key>iaridepm.enu1</key></Toolbar-00dae3a0></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes><Toolbar-0f0441a0><key>debuggergui.enu1</key></Toolbar-0f0441a0></Sizes></Row3></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>627</Bottom><Right>359</Right><x>-2</x><y>-2</y><xscreen>92</xscreen><yscreen>48</yscreen><sizeHorzCX>63889</sizeHorzCX><sizeHorzCY>55944</sizeHorzCY><sizeVertCX>250694</sizeVertCX><sizeVertCY>733100</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>186</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>188</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>219114</sizeHorzCY><sizeVertCX>63889</sizeVertCX><sizeVertCY>55944</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

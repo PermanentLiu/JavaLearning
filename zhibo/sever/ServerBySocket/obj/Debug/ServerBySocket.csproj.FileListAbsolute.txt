@@ -1,0 +1,30 @@
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\bin\Debug\ServerBySocket.exe.config
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\bin\Debug\ServerBySocket.exe
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\bin\Debug\ServerBySocket.pdb
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\obj\Debug\ServerBySocket.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\obj\Debug\ServerBySocket.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\obj\Debug\ServerBySocket.exe
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\obj\Debug\ServerBySocket.pdb
+d:\documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\obj\Debug\ServerBySocket.ServerForm.resources
+D:\Documents\visual studio 2013\Projects\ServerBySocket\ServerBySocket\obj\Debug\ServerBySocket.csprojResolveAssemblyReference.cache
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\bin\Debug\ServerBySocket.exe.config
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\ServerBySocket.exe
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\ServerBySocket.pdb
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\bin\Debug\ServerBySocket.exe
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\bin\Debug\ServerBySocket.pdb
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\ServerBySocket.csprojResolveAssemblyReference.cache
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\ServerBySocket.ServerForm.resources
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\ServerBySocket.Properties.Resources.resources
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\ServerBySocket.csproj.GenerateResource.Cache
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\bin\Debug\MySQLDriverCS.dll
+C:\Users\106B\Desktop\智能停车场\sever\ServerBySocket\obj\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\bin\Debug\ServerBySocket.exe.config
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.exe
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.pdb
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\bin\Debug\ServerBySocket.exe
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\bin\Debug\ServerBySocket.pdb
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.csprojResolveAssemblyReference.cache
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.ServerForm.resources
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.Properties.Resources.resources
+C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.csproj.GenerateResource.Cache
