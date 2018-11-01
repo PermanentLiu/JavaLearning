@@ -28,3 +28,15 @@ C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\WindowsFormsApp
 C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.ServerForm.resources
 C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.Properties.Resources.resources
 C:\Users\106B\Desktop\毕设sc\sc\sever\ServerBySocket\obj\Debug\ServerBySocket.csproj.GenerateResource.Cache
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\bin\Debug\ServerBySocket.exe.config
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\bin\Debug\ServerBySocket.exe
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\bin\Debug\ServerBySocket.pdb
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.csprojAssemblyReference.cache
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\WindowsFormsApplication1.Form2.resources
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.ServerForm.resources
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.Properties.Resources.resources
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.csproj.GenerateResource.cache
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.csproj.CoreCompileInputs.cache
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.csproj.CopyComplete
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.exe
+D:\Files\Github\Learning\zhibo\sever\ServerBySocket\obj\Debug\ServerBySocket.pdb

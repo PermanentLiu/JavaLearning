@@ -10,3 +10,13 @@ D:\Documents\visual studio 2013\Projects\ServerBySocket\ClientBySocket\obj\Debug
 C:\Users\106B\Desktop\智能停车场\sever\ClientBySocket\bin\Debug\ClientBySocket.exe.config
 C:\Users\106B\Desktop\智能停车场\sever\ClientBySocket\obj\Debug\ClientBySocket.exe
 C:\Users\106B\Desktop\智能停车场\sever\ClientBySocket\obj\Debug\ClientBySocket.pdb
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\bin\Debug\ClientBySocket.exe.config
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\bin\Debug\ClientBySocket.exe
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\bin\Debug\ClientBySocket.pdb
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.csprojAssemblyReference.cache
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.ClientForm.resources
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.Properties.Resources.resources
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.csproj.GenerateResource.cache
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.csproj.CoreCompileInputs.cache
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.exe
+D:\Files\Github\Learning\zhibo\sever\ClientBySocket\obj\Debug\ClientBySocket.pdb
